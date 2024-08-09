@@ -22,7 +22,7 @@
    - 第1分区为Ventoy启动分区（存放Ventoy启动文件），格式必须是FAT格式，分区起始扇区号依据自身需求确定（如果是UEFI启动则根据自身需求确定起始扇区号；如果是BIOS启动，则建议从2048号扇区开始，因为要在MBR中写入对应的启动文件，需要一定的保留空间），分区大小依据自己需求确定。
    - 第2分区为Ventoy的ISO分区及插件分区，可以是NTFS, EXT等格式。可参照下图分区结构：Windows系统采用UEFI方式启动，默认为下图分区结构，如果有MSR和ESP两个分区，则可将MSR分区合并到ESP，将压缩包中Ventoy相关的启动文件全部拷贝到现有EFI分区，不用再新建分区，也不用格式化U盘或硬盘，不改变现有硬盘分区结构
 
-   ![分区结构示例](./_resources/fc30d3e669337f866b12d41100cd7253)
+   ![分区结构示例](./_resources/fc30d3e669337f866b12d41100cd7253.png)
 
 2. BIOS设置为UEFI启动，关闭安全启动，压缩包中只提供了x64的UEFI方式启动文件，如需要其他平台的UEFI启动文件，可以给我发消息
 
@@ -54,7 +54,7 @@
 
 #### UEFI启动引导器成功启动后的效果，以rEFInd演示
 
-![UEFI启动引导器](./_resources/5140d5402cc976b8e226835c4f8ce099)
+![UEFI启动引导器](./_resources/5140d5402cc976b8e226835c4f8ce099.png)
 
 ### 手动部署BIOS版到电脑硬盘，与Windows、Linux系统共存步骤
 
@@ -65,19 +65,19 @@
 
 1. 通过bootmgr引导，添加到当前windows系统的bcd文件中
 
-    ![添加引导](./_resources/e652613df3a5b77a3a375295d440a08a)
+    ![添加引导](./_resources/e652613df3a5b77a3a375295d440a08a.png)
 
     bootmgr启动效果演示图
 
-    ![bootmgr启动效果](./_resources/dbe56c38bca42a3feef973c9733e097b)
+    ![bootmgr启动效果](./_resources/dbe56c38bca42a3feef973c9733e097b.png)
 
 2. 通过xorboot引导，配置xorboot启动菜单
 
-    ![配置xorboot启动菜单](./_resources/591e4df0e634aa50eb79539caf54f651)
+    ![配置xorboot启动菜单](./_resources/591e4df0e634aa50eb79539caf54f651.png)
 
     xorboot启动效果演示图
 
-    ![xorboot启动效果](./_resources/711756e7734f302182bfca55103e9766)
+    ![xorboot启动效果](./_resources/711756e7734f302182bfca55103e9766.png)
 
 3. 通过grub2引导，grub.cfg中添加如下代码
 
@@ -91,7 +91,7 @@
 
     grub2启动效果演示图
 
-    ![grub2启动效果](./_resources/7ac69f8ac03c803a717fb98ef13134ba)
+    ![grub2启动效果](./_resources/7ac69f8ac03c803a717fb98ef13134ba.png)
 
 4. 通过grub4dos引导，menu.lst添加如下代码
 
@@ -104,4 +104,4 @@
 
     grub4dos启动效果演示图
 
-    ![grub4dos启动效果](./_resources/6080bffd42862d85be8a2a2cf0602516)
+    ![grub4dos启动效果](./_resources/6080bffd42862d85be8a2a2cf0602516.png)
